@@ -22,4 +22,5 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x HelloAndroid/gradlew
     - name: Build with Gradle
-      run: ./HelloAndroid/gradlew assembleDebug assembleDebugAndroidTest
+      working-directory: HelloAndroid
+      run: ./gradlew assembleDebug assembleDebugAndroidTest
